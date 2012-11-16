@@ -1,0 +1,9 @@
+{% if latest_dooraccess_list %}
+        <ul>
+        {% for dooraccess in latest_dooraccess_list %}
+                <li><a href="/dooraccess/{{ dooraccess.id }}/">{{ dooraccess.id }} </a></li>
+        {% endfor %}
+        </ul>
+{% else %}
+        <p>No dooraccess are available.</p>
+{% endif %}

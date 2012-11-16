@@ -1,0 +1,9 @@
+{% if latest_device_list %}
+        <ul>
+        {% for device in latest_device_list %}
+                <li><a href="/device/{{ device.id }}/">{{ device.phoneNumber }} </a></li>
+        {% endfor %}
+        </ul>
+{% else %}
+        <p>No devicess are available.</p>
+{% endif %}

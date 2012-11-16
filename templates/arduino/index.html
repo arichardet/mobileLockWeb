@@ -1,0 +1,10 @@
+{% if latest_arduino_list %}
+	<ul>
+	{% for arduino in latest_arduino_list %}
+		<li><a href="/arduino/{{ arduino.id }}/">{{ arduino.name }} </a></li>
+	{% endfor %}
+	</ul>
+{% else %}
+	<p>No arduinos are available.</p>
+{% endif %}
+

@@ -1,0 +1,9 @@
+{% if latest_door_list %}
+        <ul>
+        {% for door in latest_door_list %}
+                <li><a href="/door/{{ door.id }}/">{{ door.name }} </a></li>
+        {% endfor %}
+        </ul>
+{% else %}
+        <p>No doors are available.</p>
+{% endif %}
